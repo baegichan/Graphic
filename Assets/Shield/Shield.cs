@@ -6,6 +6,7 @@ public class Shield : MonoBehaviour
 {
     Material material1;
     Material material2;
+    public ShieldtoCam Camcompo;
     public GameObject EffectPrefab1;
     public GameObject EffectPrefab2;
     public GameObject SparkPrefab;
@@ -41,6 +42,7 @@ public class Shield : MonoBehaviour
             Destroy(Target1, 1.5F);
             Destroy(Target2, 0.7F);
             Destroy(other.gameObject);
+            Camcompo.Shieldhit();
         }
 
     }
