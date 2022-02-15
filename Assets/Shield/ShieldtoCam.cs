@@ -21,8 +21,6 @@ public class ShieldtoCam : MonoBehaviour
         material1 = image.GetComponent<Image>().material;
         ResetMaterial();
         shieldamount = material1.GetFloat("_Shield");
-      
-     
     }
     
     void Update()
@@ -36,8 +34,6 @@ public class ShieldtoCam : MonoBehaviour
         {
             Vector3 screenPos = cam.WorldToScreenPoint(Shield.position);
             StartVector = new Vector2((screenPos.x / Screen.width), (screenPos.y / Screen.height));
-            Debug.Log(StartVector);
-
             material1.SetVector("_Screenposition", new Vector4(-9.0f + StartVector.x * 18 + (Camera.main.transform.position.x), -5.5f + StartVector.y * 11 + Camera.main.transform.position.y, Canvas.position.z));
 
         }
