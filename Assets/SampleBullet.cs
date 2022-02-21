@@ -11,5 +11,6 @@ public class SampleBullet : MonoBehaviour
     private void Start()
     {
         rigid.AddForce(transform.forward * 1000);
+        Destroy(this, 10);
     }
 }
