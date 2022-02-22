@@ -5,12 +5,8 @@ using UnityEngine;
 public class ScanMaterial : MonoBehaviour
 {
     Material material1;
-
-
     private float s_size = 0;
     public float max_s_size = 3;
-    // Start is called before the first frame update
-  
     public void MeshSetting(Mesh mesh)
     {
         ParticleSystemRenderer psr1 = GetComponent<ParticleSystemRenderer>();
@@ -24,7 +20,6 @@ public class ScanMaterial : MonoBehaviour
     }
    public void StartRoutine()
    {
-   
 
         StartCoroutine(SphereSizeUp(material1));
 

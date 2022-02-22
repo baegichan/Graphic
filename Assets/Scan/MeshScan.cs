@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class MeshScan : MonoBehaviour
 {
    
@@ -29,7 +30,6 @@ public class MeshScan : MonoBehaviour
             {
                 Target1.GetComponent<ScanMaterial>().MeshSetting(GetComponent<MeshFilter>().mesh);
                 Target1.GetComponent<ScanMaterial>().SetPosition(other.contacts[0].point);
-
                 Target1.GetComponent<ScanMaterial>().StartRoutine();
             }
             }
